@@ -10,8 +10,36 @@
     "issues": "https://www.drupal.org/project/issues/bibcite",
     "source": "https://git.drupalcode.org/project/bibcite"
   },
+  "repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "citation-style-language/locales",
+            "version":"1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/citation-style-language/locales.git",
+                "reference": "master"
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "citation-style-language/styles-distribution",
+            "version":"1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/citation-style-language/styles-distribution.git",
+                "reference": "master"
+            }
+        }
+    }
+  ],
   "require": {
-    "academicpuma/citeproc-php": "~1.0",
+    "citation-style-language/locales":"@dev",
+    "citation-style-language/styles-distribution":"@dev",
+    "seboettg/citeproc-php": "^2",
     "adci/full-name-parser": "^0.2.4",
     "technosophos/libris": "~2.0",
     "audiolabs/bibtexparser": "dev-master",
